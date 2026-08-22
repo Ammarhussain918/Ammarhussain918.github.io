@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ammar Hussain | Spectral Geologist &amp; GIS Specialist</title>
+  <meta name="description" content="PhD Candidate in Geology specializing in Hyperspectral Remote Sensing, Critical Mineral Exploration, and GIS." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    :root {
+      --bg-primary: #0a0f1d;
+      --bg-secondary: #111827;
+      --card-bg: #1e293b;
+      --card-border: #334155;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0ea5e9;
+      --tag-bg: #1e3a5f;
+      --tag-text: #7dd3fc;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+    nav {
+      background-color: var(--bg-secondary);
+      border-bottom: 1px solid var(--card-border);
+      padding: 1rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-brand { font-weight: 700; color: #fff; text-decoration: none; font-size: 1.1rem; }
+    .nav-brand span { color: var(--accent); }
+    .nav-links { display: flex; gap: 1.25rem; }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+    .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+    
+    header {
+      background: linear-gradient(180deg, rgba(17, 24, 39, 0.8) 0%, rgba(10, 15, 29, 1) 100%);
+      border-bottom: 1px solid var(--card-border);
+      padding: 3.5rem 1.5rem 2.5rem;
+      text-align: center;
+    }
+    .profile-img-container {
+      margin-bottom: 1.5rem;
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+    }
+    .hero-title { font-size: 2.5rem; font-weight: 800; color: #ffffff; margin-bottom: 0.25rem; }
+    .hero-subtitle { font-size: 1.2rem; color: var(--accent); font-weight: 500; margin-bottom: 1rem; }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.25rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero-meta span { display: inline-flex; align-items: center; gap: 0.4rem; }
+    .btn-group { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.75rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .btn-primary { background-color: var(--accent); color: #0b1120; }
+    .btn-primary:hover { background-color: var(--accent-hover); }
+    .btn-outline { background-color: transparent; color: var(--text-main); border: 1px solid var(--card-border); }
+    .btn-outline:hover { background-color: var(--card-bg); border-color: var(--accent); color: var(--accent); }
+    
+    section { margin-top: 3rem; }
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      border-bottom: 2px solid var(--card-border);
+      padding-bottom: 0.5rem;
+    }
+    .section-title i { color: var(--accent); }
+    .card {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .card-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem; }
+    .card-title { font-size: 1.1rem; font-weight: 600; color: #ffffff; }
+    .card-subtitle { font-size: 0.95rem; color: var(--accent); margin-bottom: 0.5rem; }
+    .card-date { font-size: 0.85rem; color: var(--text-muted); }
+    ul.card-bullets { list-style-type: disc; margin-left: 1.25rem; color: var(--text-muted); font-size: 0.95rem; }
+    ul.card-bullets li { margin-bottom: 0.35rem; }
+    
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+    .skill-box { background-color: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 8px; padding: 1.25rem; }
+    .skill-box h4 { color: #ffffff; font-size: 1rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .tag { background-color: var(--tag-bg); color: var(--tag-text); font-size: 0.8rem; font-weight: 500; padding: 0.25rem 0.6rem; border-radius: 4px; }
+    
+    .pub-item { margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(51, 65, 85, 0.5); }
+    .pub-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .pub-title { font-weight: 600; color: #ffffff; }
+    .pub-authors { font-size: 0.9rem; color: var(--text-muted); }
+    .pub-venue { font-size: 0.85rem; color: var(--accent); }
+    
+    footer { border-top: 1px solid var(--card-border); text-align: center; padding: 2.5rem 1.5rem; color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">Ammar <span>Hussain</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Overview</a>
+        <a href="insights.html">Field Notes &amp; Insights</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header>
+    <div class="container" style="padding: 0;">
+      <div class="profile-img-container">
+        <!-- Upload your picture to GitHub named "profile.jpg" -->
+        <img src="profile.jpg" alt="Ammar Hussain" class="profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Ammar+Hussain&size=150&background=1e293b&color=38bdf8&bold=true';" />
+      </div>
+      <h1 class="hero-title">Ammar Hussain</h1>
+      <p class="hero-subtitle">Spectral Geologist &amp; GIS Specialist | PhD Candidate</p>
+      <div class="hero-meta">
+        <span><i class="fa-solid fa-location-dot"></i> Houston, Texas</span>
+        <span><i class="fa-solid fa-building-columns"></i> University of Houston</span>
+        <span><i class="fa-solid fa-envelope"></i> ahussain28@uh.edu</span>
+        <span><i class="fa-solid fa-phone"></i> +1 346-542-9892</span>
+      </div>
+      <div class="btn-group">
+        <a href="mailto:ahussain28@uh.edu" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+        <a href="https://scholar.google.com/citations?user=BrQnGpcAAAAJ&hl=en" target="_blank" class="btn btn-outline"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
+        <a href="https://www.linkedin.com/in/ammar-hussain-a161015b/" target="_blank" class="btn btn-outline"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="insights.html" class="btn btn-outline"><i class="fa-solid fa-book-open"></i> Read Insights</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    
+    <!-- Summary -->
+    <section>
+      <h2 class="section-title"><i class="fa-solid fa-user"></i> Professional Summary</h2>
+      <div class="card">
+        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">
+          Spectral Geologist &amp; GIS Specialist with 4+ years of experience across hyperspectral and multispectral remote sensing, geospatial modeling, UAV mapping, and in-situ spectral exploration. Specialized in integrating satellite imagery, field geology, laboratory spectroscopy, and machine learning to map critical minerals, guide exploration drilling, and assess geohazards.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2 class="section-title"><i class="fa-solid fa-gears"></i> Core Competencies &amp; Tools</h2>
+      <div class="skills-grid">
+        <div class="skill-box">
+          <h4><i class="fa-solid fa-satellite-dish" style="color: var(--accent);"></i> Remote Sensing &amp; Spectra</h4>
+          <div class="tags">
+            <span class="tag">Hyperspectral (VNIR, SWIR, LWIR)</span>
+            <span class="tag">ASD FieldSpec Pro</span>
+            <span class="tag">Spectral Unmixing</span>
+            <span class="tag">ENVI 6.2</span>
+            <span class="tag">Satellite Multispectral Data</span>
+          </div>
+        </div>
+        <div class="skill-box">
+          <h4><i class="fa-solid fa-map-location-dot" style="color: var(--accent);"></i> GIS &amp; Spatial Analysis</h4>
+          <div class="tags">
+            <span class="tag">ArcGIS Pro 3.2</span>
+            <span class="tag">DEM &amp; Terrain Modeling</span>
+            <span class="tag">UAV Photogrammetry</span>
+            <span class="tag">Orthomosaic Generation</span>
+            <span class="tag">Geohazard Mapping</span>
+          </div>
+        </div>
+        <div class="skill-box">
+          <h4><i class="fa-solid fa-flask-vial" style="color: var(--accent);"></i> Geology &amp; Geochemistry</h4>
+          <div class="tags">
+            <span class="tag">pXRF Analysis</span>
+            <span class="tag">LIBS</span>
+            <span class="tag">XRD Studies</span>
+            <span class="tag">Critical Minerals (LCT/REE)</span>
+            <span class="tag">RocScience Slide2</span>
+          </div>
+        </div>
+        <div class="skill-box">
+          <h4><i class="fa-solid fa-code" style="color: var(--accent);"></i> Programming &amp; Analytics</h4>
+          <div class="tags">
+            <span class="tag">Python (Geospatial Workflows)</span>
+            <span class="tag">Machine Learning (Random Forest, LightGBM)</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">EIVA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section>
+      <h2 class="section-title"><i class="fa-solid fa-newspaper"></i> Selected Publications</h2>
+      <div class="card">
+        <div class="pub-item">
+          <div class="pub-title">Hyperspectral imaging and analysis of coal ash for rare earth elements</div>
+          <div class="pub-authors">Hussain, A., Khan, S. D., &amp; Radović, J. R. (2026)</div>
+          <div class="pub-venue">Fuel, 409, 137676. DOI: 10.1016/j.fuel.2025.137676</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">Tectonic analysis of the Mula River Basin, Kirthar fold belt, Pakistan, using hypsometric index</div>
+          <div class="pub-authors">Hussain, A., Afzal, A., &amp; Khan, S. D. (2024)</div>
+          <div class="pub-venue">Interpretation, 12(2), SC9-SC16.</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">Multiscale Hyperspectral Remote Sensing and Integrated Geochemical Analysis for Pegmatites Hosted Critical Minerals</div>
+          <div class="pub-authors">Hussain, A., &amp; Khan, S. D.</div>
+          <div class="pub-venue">Under Preparation</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Ammar Hussain &bull; Hosted on GitHub Pages</p>
+  </footer>
+</body>
+</html>
