@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News &amp; Field Notes | Ammar Hussain</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    :root {
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --border-color: #e2e8f0;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --accent-blue: #0284c7;
+      --nav-bg: #0f172a;
+      --tag-bg: #f0f9ff;
+      --tag-text: #0369a1;
+      --tag-border: #bae6fd;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg-page); color: var(--text-main); line-height: 1.65; }
+    
+    nav { background-color: var(--nav-bg); position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    .nav-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.5rem; }
+    .nav-brand { color: #fff; font-weight: 700; text-decoration: none; font-size: 1.05rem; }
+    .nav-brand span { color: #38bdf8; }
+    .nav-links { display: flex; list-style: none; gap: 1.25rem; }
+    .nav-links a { color: #cbd5e1; text-decoration: none; font-size: 0.92rem; font-weight: 500; }
+    .nav-links a:hover, .nav-links a.active { color: #fff; border-bottom: 2px solid #38bdf8; padding-bottom: 2px; }
+
+    .container { max-width: 900px; margin: 2.5rem auto; padding: 0 1.5rem; }
+    .page-header { margin-bottom: 2rem; border-bottom: 2px solid var(--border-color); padding-bottom: 1rem; }
+    .page-title { font-size: 1.8rem; font-weight: 800; color: #0f172a; }
+    .page-subtitle { color: var(--text-muted); font-size: 0.95rem; }
+
+    .article-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 10px; padding: 1.75rem 2rem; margin-bottom: 1.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .article-meta { display: flex; gap: 1rem; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+    .article-meta span { display: inline-flex; align-items: center; gap: 0.35rem; }
+    .article-title { font-size: 1.25rem; color: #0f172a; font-weight: 700; margin-bottom: 0.75rem; }
+    .article-body p { color: #334155; margin-bottom: 0.85rem; font-size: 0.95rem; }
+    .tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 1rem; }
+    .tag { background-color: var(--tag-bg); color: var(--tag-text); border: 1px solid var(--tag-border); font-size: 0.75rem; font-weight: 600; padding: 0.2rem 0.5rem; border-radius: 4px; }
+
+    footer { text-align: center; padding: 2rem 1.5rem; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border-color); background: #ffffff; margin-top: 3rem; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Ammar <span>Hussain</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="insights.html" class="active">News &amp; Insights</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    
+    <div class="page-header">
+      <h1 class="page-title">News &amp; Field Notes</h1>
+      <p class="page-subtitle">Updates on publications, conference talks, and field exploration campaigns.</p>
+    </div>
+
+    <!-- Article 1: New Paper Published -->
+    <article class="article-card">
+      <div class="article-meta">
+        <span><i class="fa-solid fa-newspaper"></i> Paper Published</span>
+        <span><i class="fa-solid fa-calendar"></i> 2026</span>
+      </div>
+      <h2 class="article-title">New Paper Published in <em>Fuel</em> on Coal Ash REE Characterization</h2>
+      <div class="article-body">
+        <p>
+          Our latest paper, <em>"Hyperspectral imaging and analysis of coal ash for rare earth elements,"</em> is officially published in <strong>Fuel</strong> (Elsevier)[cite: 1, 3, 4]. This study presents a non-destructive hyperspectral workflow (VNIR-SWIR) for identifying rare earth element enrichments in coal ash byproducts[cite: 2, 4].
+        </p>
+      </div>
+      <div class="tags">
+        <span class="tag">Publication</span>
+        <span class="tag">Rare Earth Elements</span>
+        <span class="tag">Fuel Journal</span>
+      </div>
+    </article>
+
+    <!-- Article 2: Shigar Valley -->
+    <article class="article-card">
+      <div class="article-meta">
+        <span><i class="fa-solid fa-mountain"></i> Field Expedition</span>
+        <span><i class="fa-solid fa-location-dot"></i> Karakoram Range, Shigar Valley</span>
+      </div>
+      <h2 class="article-title">Hyperspectral Exploration of LCT Pegmatite Belts</h2>
+      <div class="article-body">
+        <p>
+          Targeting Lithium-Cesium-Tantalum (LCT) pegmatites in the high-altitude Karakoram Range requires blending remote sensing with rigorous field verification[cite: 2, 4]. By pairing spaceborne PRISMA hyperspectral scenes with ASD FieldSpec Pro contact spectra and pXRF/LIBS analyses, we successfully delineated alteration boundaries in rugged mountainous terrain[cite: 2, 4].
+        </p>
+      </div>
+      <div class="tags">
+        <span class="tag">LCT Pegmatites</span>
+        <span class="tag">PRISMA</span>
+        <span class="tag">Critical Minerals</span>
+        <span class="tag">Field Geology</span>
+      </div>
+    </article>
+
+    <!-- Article 3: North Waziristan Copper Exploration -->
+    <article class="article-card">
+      <div class="article-meta">
+        <span><i class="fa-solid fa-drone"></i> Exploration Case Study</span>
+        <span><i class="fa-solid fa-location-dot"></i> North Waziristan</span>
+      </div>
+      <h2 class="article-title">UAV Photogrammetry &amp; Structural Mapping in Ophiolitic Copper Systems</h2>
+      <div class="article-body">
+        <p>
+          During the copper exploration project with Spatio Engineering, we integrated high-resolution UAV orthomosaics with field discontinuity mapping[cite: 1]. The resulting structural models guided targeting for exploration drilling and ultimately supported client approval for open-pit mining operations[cite: 1].
+        </p>
+      </div>
+      <div class="tags">
+        <span class="tag">Copper Exploration</span>
+        <span class="tag">UAV Photogrammetry</span>
+        <span class="tag">Structural Geology</span>
+      </div>
+    </article>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Ammar Hussain &bull; University of Houston &bull; Hosted on GitHub Pages</p>
+  </footer>
+
+</body>
+</html>
