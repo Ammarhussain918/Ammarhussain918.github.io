@@ -36,10 +36,10 @@
     .page-subtitle { color: var(--text-muted); font-size: 0.95rem; }
 
     .article-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 10px; padding: 1.75rem 2rem; margin-bottom: 1.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-    .article-meta { display: flex; gap: 1rem; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+    .article-meta { display: flex; gap: 1rem; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.5rem; flex-wrap: wrap; }
     .article-meta span { display: inline-flex; align-items: center; gap: 0.35rem; }
     .article-title { font-size: 1.25rem; color: #0f172a; font-weight: 700; margin-bottom: 0.75rem; }
-    .article-body p { color: #334155; margin-bottom: 0.85rem; font-size: 0.95rem; }
+    .article-body p { color: #334155; margin-bottom: 0.85rem; font-size: 0.95rem; text-align: justify; }
     .tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 1rem; }
     .tag { background-color: var(--tag-bg); color: var(--tag-text); border: 1px solid var(--tag-border); font-size: 0.75rem; font-weight: 600; padding: 0.2rem 0.5rem; border-radius: 4px; }
 
@@ -67,7 +67,7 @@
       <p class="page-subtitle">Updates on publications, conference talks, and field exploration campaigns.</p>
     </div>
 
-    <!-- Article 1: New Paper Published -->
+    <!-- Article 1 -->
     <article class="article-card">
       <div class="article-meta">
         <span><i class="fa-solid fa-newspaper"></i> Paper Published</span>
@@ -76,7 +76,7 @@
       <h2 class="article-title">New Paper Published in <em>Fuel</em> on Coal Ash REE Characterization</h2>
       <div class="article-body">
         <p>
-          Our latest paper, <em>"Hyperspectral imaging and analysis of coal ash for rare earth elements,"</em> is officially published in <strong>Fuel</strong> (Elsevier)[cite: 1, 3, 4]. This study presents a non-destructive hyperspectral workflow (VNIR-SWIR) for identifying rare earth element enrichments in coal ash byproducts[cite: 2, 4].
+          Our latest paper, <em>"Hyperspectral imaging and analysis of coal ash for rare earth elements,"</em> is officially published in <strong>Fuel</strong> (Elsevier). This study presents a non-destructive hyperspectral workflow (VNIR-SWIR) for identifying rare earth element enrichments in coal ash byproducts[cite: 2, 4].
         </p>
       </div>
       <div class="tags">
@@ -86,7 +86,7 @@
       </div>
     </article>
 
-    <!-- Article 2: Shigar Valley -->
+    <!-- Article 2 -->
     <article class="article-card">
       <div class="article-meta">
         <span><i class="fa-solid fa-mountain"></i> Field Expedition</span>
@@ -106,7 +106,7 @@
       </div>
     </article>
 
-    <!-- Article 3: North Waziristan Copper Exploration -->
+    <!-- Article 3 -->
     <article class="article-card">
       <div class="article-meta">
         <span><i class="fa-solid fa-drone"></i> Exploration Case Study</span>
